@@ -1,8 +1,11 @@
 import org.lessons.animals.Animale;
 import org.lessons.animals.Cane;
 import org.lessons.animals.Passerotto;
+import org.lessons.animals.Volatile;
 import org.lessons.animals.Aquila;
 import org.lessons.animals.Delfino;
+import org.lessons.animals.Volatile;
+import org.lessons.animals.Nuotatore;
 
 
 public class App {
@@ -22,6 +25,7 @@ public class App {
         passerotto.verso();
         System.out.println("Passerotto: mangia: ");
         passerotto.mangia();
+        faiVolare(passerotto);
 
         Aquila aquila = new Aquila();
         System.out.println("Aquila: dorme: ");
@@ -30,6 +34,7 @@ public class App {
         aquila.verso();
         System.out.println("Aquila: mangia: ");
         aquila.mangia();
+        faiVolare(aquila);
 
         Delfino delfino = new Delfino();
         System.out.println("Delfino: dorme: ");
@@ -38,7 +43,13 @@ public class App {
         delfino.verso();
         System.out.println("Delfino: mangia: ");
         delfino.mangia();
+        faiNuotare(delfino);
 
-
+    }
+    static void faiVolare(Volatile animaleVolante){
+        animaleVolante.vola();
+    }
+    static void faiNuotare(Nuotatore animaleNuotante){
+        animaleNuotante.nuota();
     }
 }
